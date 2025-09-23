@@ -12,7 +12,7 @@ env:
   ###############################################
   ### Replace <username> with GitHub username ###
   ###############################################
-  AZURE_WEBAPP_NAME: <username>-ttt-app
+  AZURE_WEBAPP_NAME: yeromme-ttt-app
 
 jobs:
   setup-up-azure-resources:
@@ -65,3 +65,4 @@ jobs:
         if: success()
         run: |
           az group delete --name ${{env.AZURE_RESOURCE_GROUP}} --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}} --yes
+        
